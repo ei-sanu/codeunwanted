@@ -48,9 +48,9 @@ const ToolSelector: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute z-20 w-full mt-2 cyber-border bg-cyber-dark shadow-lg max-h-[300px] overflow-hidden"
+            className="absolute z-20 w-full mt-2 cyber-border bg-cyber-dark shadow-lg"
           >
-            <ul className="py-2 overflow-y-auto max-h-[300px] scrollbar-thin scrollbar-thumb-cyber-green-400 scrollbar-track-cyber-dark">
+            <ul className="py-2">
               {tools.map((tool) => (
                 <motion.li
                   key={tool.id}
@@ -58,10 +58,9 @@ const ToolSelector: React.FC = () => {
                 >
                   <button
                     onClick={() => selectTool(tool.id)}
-                    className={`w-full text-left px-4 py-2 flex items-center space-x-2 ${selectedTool === tool.id ? 'text-cyber-green-400 bg-cyber-green-900/20' : 'text-gray-300 hover:text-cyber-green-400'
-                      }`}
+                    className="w-full px-4 py-2 text-left text-gray-300 hover:text-cyber-green-400 transition-colors duration-200"
                   >
-                    <span className="flex-grow">{t(tool.translationKey)}</span>
+                    {t(tool.translationKey)}
                   </button>
                 </motion.li>
               ))}

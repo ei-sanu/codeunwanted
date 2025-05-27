@@ -118,8 +118,8 @@ const Home: React.FC = () => {
             animate={{ opacity: [0, 1, 0.8, 1] }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            <ShieldAlert className="h-16 w-16 text-cyber-green-500 mx-auto mb-4" />
-            <p className="text-xl text-cyber-green-400 font-cyber">
+            <ShieldAlert className="h-16 w-16 text-cyber-green-500 mx-auto mb-16 mt-16" />
+            <p className="text-xl text-cyber-green-400 font-cyber mb-4">
               Select a tool to begin encoding or decoding
             </p>
           </motion.div>
